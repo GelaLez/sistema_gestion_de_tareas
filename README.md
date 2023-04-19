@@ -20,8 +20,8 @@ nota:el archivo viene en el proyecto
 1.- Despues para poner en funcionamiento el sistema tenemos que clonar el repo, la liga es :
 https://github.com/GelaLez/sistema_gestion_de_tareas.git
 
-2.- instalar las dependencias con el manejador de paquetes npm
-  npm install
+2.- instalar las dependencias con el manejador de paquetes npm,
+ **npm install**
 
 3.- Correr el programa
   node app.js
