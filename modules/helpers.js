@@ -10,8 +10,8 @@ function mysqlQuery(tipo, c, query, d) {
                 console.error(err);
                 reject({ err: true, description: err })
             } else {
-                if (tipo == 'GET') {
-                    resolve({ err: false, description: rs })
+                if (tipo == 'GET') {                    
+                    resolve({ err: false, result: rs })
                 } else {
                     console.log(rs.insertId);
                     resolve({ err: false, insertId: rs.insertId })
