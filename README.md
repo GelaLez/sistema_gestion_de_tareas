@@ -12,6 +12,10 @@ Preparativos previos
 debes crear una base de datos con el nombre tareas y agregar las siguientes tablas
 
 
+![imagen](https://user-images.githubusercontent.com/16170395/233159930-ef3543ab-272e-453e-bc52-33fba8d6d72a.png)
+
+nota:el archivo viene en el proyecto
+
 
 1.- Despues para poner en funcionamiento el sistema tenemos que clonar el repo, la liga es :
 https://github.com/GelaLez/sistema_gestion_de_tareas.git
