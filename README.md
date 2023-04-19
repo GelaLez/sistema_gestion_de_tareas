@@ -24,7 +24,7 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
  **npm install**
 
 3.- Correr el programa
-  node app.js
+  **node app.js**
   
 4.- Obtener la informacion de todas las tareas
 
