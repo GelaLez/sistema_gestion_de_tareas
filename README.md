@@ -5,9 +5,9 @@ preparativos previos
 debes crear una base de datos con el nombre tareas y agregar las siguientes tablas
 
 
--- -----------------------------------------------------
--- Table `mydb`.`usuarios`
--- -----------------------------------------------------
+
+# Table `mydb`.`usuarios`
+
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `idusuarios` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL,
@@ -17,10 +17,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   UNIQUE INDEX `idusuarios_UNIQUE` (`idusuarios` ASC) VISIBLE)
 ENGINE = InnoDB;
 
+# Table `mydb`.`tareas`
 
--- -----------------------------------------------------
--- Table `mydb`.`tareas`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `tareas` (
   `idtareas` INT NOT NULL AUTO_INCREMENT,
   `usuarios_idusuarios` INT NOT NULL,
