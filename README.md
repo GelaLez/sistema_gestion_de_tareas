@@ -1,40 +1,47 @@
 # sistema_gestion_de_tareas
 
-preparativos previos
+
+El sistema de gestion de tareas tiene como proposito el que un usuario pueda visualizar, 
+agregar, editar o eliminar las tareas que quiera registrar en su dia a dia. 
+Y debido a que el sistema es utilizado por varios usuarios, es necesario que la
+API identifique al usuarioo session que esta solicitando.
+
+
+Preparativos previos
 
 debes crear una base de datos con el nombre tareas y agregar las siguientes tablas
 
 
 
-# Table `mydb`.`usuarios`
+Table mydb.usuarios
 
-CREATE TABLE IF NOT EXISTS `usuarios` (
-  `idusuarios` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(45) NULL,
-  `token` VARCHAR(45) NULL,
-  `activo` VARCHAR(45) NULL,
-  PRIMARY KEY (`idusuarios`),
-  UNIQUE INDEX `idusuarios_UNIQUE` (`idusuarios` ASC) VISIBLE)
+CREATE TABLE IF NOT EXISTS usuarios (
+  idusuarios INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(45) NULL,
+  token VARCHAR(45) NULL,
+  activo VARCHAR(45) NULL,
+  PRIMARY KEY (idusuarios),
+  UNIQUE INDEX idusuarios_UNIQUE (idusuarios ASC) VISIBLE)
 ENGINE = InnoDB;
 
-# Table `mydb`.`tareas`
+ Table mydb.tareas
 
-CREATE TABLE IF NOT EXISTS `tareas` (
-  `idtareas` INT NOT NULL AUTO_INCREMENT,
-  `usuarios_idusuarios` INT NOT NULL,
-  `titulo` VARCHAR(45) NULL,
-  `descripcion` VARCHAR(45) NULL,
-  `estatus_de_complecion` VARCHAR(45) NULL,
-  `fecha_de_entrega` VARCHAR(45) NULL,
-  `comentarios` VARCHAR(45) NULL,
-  `responsable` VARCHAR(45) NULL,
-  `tags` VARCHAR(45) NULL,
-  PRIMARY KEY (`idtareas`),
-  UNIQUE INDEX `idtareas_UNIQUE` (`idtareas` ASC) VISIBLE,
-  INDEX `fk_tareas_usuarios_idx` (`usuarios_idusuarios` ASC) VISIBLE,
-  CONSTRAINT `fk_tareas_usuarios`
-    FOREIGN KEY (`usuarios_idusuarios`)
-    REFERENCES `mydb`.`usuarios` (`idusuarios`)
+CREATE TABLE IF NOT EXISTS tareas (
+  idtareas INT NOT NULL AUTO_INCREMENT,
+  usuarios_idusuarios INT NOT NULL,
+  titulo VARCHAR(45) NULL,
+  descripcion VARCHAR(45) NULL,
+  estatus_de_complecion VARCHAR(45) NULL,
+  fecha_de_entrega VARCHAR(45) NULL,
+  comentarios VARCHAR(45) NULL,
+  responsable VARCHAR(45) NULL,
+  tags VARCHAR(45) NULL,
+  PRIMARY KEY (idtareas),
+  UNIQUE INDEX idtareas_UNIQUE (idtareas ASC) VISIBLE,
+  INDEX fk_tareas_usuarios_idx (usuarios_idusuarios ASC) VISIBLE,
+  CONSTRAINT fk_tareas_usuarios
+    FOREIGN KEY (usuarios_idusuarios)
+    REFERENCES mydb.usuarios (idusuarios)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -53,7 +60,7 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
     url: http://localhost:3030/v1/homeworks/
     method: GET
     
-    este devolvera todos los datos de las tareas 
+    Este devolvera todos los datos de las tareas 
     
     ejemplo:
 
@@ -148,12 +155,4 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
             "idusuario":2
            }
       
-   
-   
-   
-   
-   
-   
-   
-   
-   
+                    
