@@ -58,6 +58,7 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
   node app.js
   
 4.- Obtener la informacion de todas las tareas
+
     url: http://localhost:3030/v1/homeworks/
     method: GET
     
@@ -92,6 +93,7 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
                 },
              }
  5.- Obtener informacion de una sola tarea
+ 
       url : http://localhost:3030/v1/homeworks/4
       method:GET
    Este devolvera una sola tarea
@@ -114,6 +116,7 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
       }
             
 6.-    Crear una tarea 
+
        url: http://localhost:3030/v1/homeworks/
        method: POST
        body: {
