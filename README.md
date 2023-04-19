@@ -136,8 +136,8 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
         }
    
    
-7.- Actualizar un registro es necesario enviar el idtareas de la tarea y idusuario  como identificadores del registro estos seran obligatorios
-    y los campos disponibles a  actualizar son Titulo, Descripcion, EstatusDeComplecion, FechaDeEntrega, Comentarios, Responsable, Tags.
+7.- Actualizar un registro es necesario enviar el **idtareas** de la tarea y **idusuario**  como identificadores del registro estos seran obligatorios
+    y los campos disponibles a  actualizar son **Titulo, Descripcion, EstatusDeComplecion, FechaDeEntrega, Comentarios, Responsable, Tags.**
       
       url: http://localhost:3030/v1/homeworks/
       method: PUT
@@ -148,7 +148,7 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
       }
       
       
-8.- Eliminar un registro es necesario enviar el idtareas y idusuario como datos obligatorios
+8.- Eliminar un registro es necesario enviar el **idtareas** y **idusuario** como datos obligatorios
 
      url: http://localhost:3030/v1/homeworks/
      method:DELETE
