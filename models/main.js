@@ -32,25 +32,3 @@ module.exports.start = function () {
 
     });
 }
-
-module.exports.mysqlQuery = function (tipo, c, query, d) {
-    return new Promise(function (resolve, reject) {
-        // console.log("tipo", tipo)
-        // console.log("query", query)
-        // console.log("d", d)
-        console.log("<<<<<<<<<<<", c)
-        process.exit()
-        c.query(query, d, function (err, rs) {
-            if (err) {
-                resolve({ err: true, result: err })
-                process.exit(1)
-            } else {
-                if (tipo == 'GET') {
-                    resolve({ err: false, result: rs })
-                } else {
-                    resolve({ err: false })
-                }
-            }
-        })
-    })
-}

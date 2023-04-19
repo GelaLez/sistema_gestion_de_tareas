@@ -48,4 +48,3 @@ function PostNewHomework(NewHomework) {
     `
     return helpers.mysqlQuery('POST', conn_mysql, query, d)
 }
-
