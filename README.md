@@ -61,9 +61,11 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
                     "tags": null
                 },
              }
-             
-       ![imagen](https://user-images.githubusercontent.com/16170395/233159613-5ffecb33-4ab7-4227-98ab-406e48eb3441.png)
-     
+            
+            
+            
+       
+   ![imagen](https://user-images.githubusercontent.com/16170395/233159613-5ffecb33-4ab7-4227-98ab-406e48eb3441.png)  
                           
  5.- Obtener informacion de una sola tarea es necesario enviar el identificador
  
@@ -88,8 +90,8 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
           ]
       }
       
-      ![imagen](https://user-images.githubusercontent.com/16170395/233159485-a00bdcb5-eafa-4e9c-8661-232a39aca89e.png)
-
+      
+![imagen](https://user-images.githubusercontent.com/16170395/233159485-a00bdcb5-eafa-4e9c-8661-232a39aca89e.png)
       
             
 6.-    Crear una tarea 
@@ -108,8 +110,8 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
         y los campos opcionales son Comentarios, Responsable, Tags; al insertar una nueva tarea 
         nos volvera el id del registro
         
-       ![imagen](https://user-images.githubusercontent.com/16170395/233158844-b450b892-2615-46c0-842a-ed68dd5d070b.png)
-
+       
+![imagen](https://user-images.githubusercontent.com/16170395/233158844-b450b892-2615-46c0-842a-ed68dd5d070b.png)
    
    
 7.- Actualizar un registro es necesario enviar el **idtareas** de la tarea y **idusuario**  como identificadores del registro estos seran obligatorios
@@ -123,8 +125,8 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
           "idusuario":2
       }
       
-      ![imagen](https://user-images.githubusercontent.com/16170395/233158563-8936f9ae-830d-4bcb-b9f5-593f5dca6982.png)
-
+      
+![imagen](https://user-images.githubusercontent.com/16170395/233158563-8936f9ae-830d-4bcb-b9f5-593f5dca6982.png)
       
       
 8.- Eliminar un registro es necesario enviar el **idtareas** y **idusuario** como datos obligatorios
