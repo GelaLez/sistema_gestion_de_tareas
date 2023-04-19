@@ -149,6 +149,7 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
       
       
 8.- Eliminar un registro es necesario enviar el idtareas y idusuario como datos obligatorios
+
      url: http://localhost:3030/v1/homeworks/
      method:DELETE
      body: {
