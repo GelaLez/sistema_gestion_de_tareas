@@ -13,9 +13,9 @@ debes crear una base de datos con el nombre tareas y agregar las siguientes tabl
 
 
 
-Table mydb.usuarios
+`Table mydb.usuarios`
 
-CREATE TABLE IF NOT EXISTS usuarios (
+`CREATE TABLE IF NOT EXISTS usuarios (
   idusuarios INT NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(45) NULL,
   token VARCHAR(45) NULL,
@@ -23,10 +23,11 @@ CREATE TABLE IF NOT EXISTS usuarios (
   PRIMARY KEY (idusuarios),
   UNIQUE INDEX idusuarios_UNIQUE (idusuarios ASC) VISIBLE)
 ENGINE = InnoDB;
+`
 
- Table mydb.tareas
+ `Table mydb.tareas`
 
-CREATE TABLE IF NOT EXISTS tareas (
+`CREATE TABLE IF NOT EXISTS tareas (
   idtareas INT NOT NULL AUTO_INCREMENT,
   usuarios_idusuarios INT NOT NULL,
   titulo VARCHAR(45) NULL,
@@ -44,7 +45,7 @@ CREATE TABLE IF NOT EXISTS tareas (
     REFERENCES mydb.usuarios (idusuarios)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB;`
 
 
 1.- Despues para poner en funcionamiento el sistema tenemos que clonar el repo, la liga es :
