@@ -92,7 +92,7 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
                     "tags": null
                 },
              }
- 5.- Obtener informacion de una sola tarea
+ 5.- Obtener informacion de una sola tarea es necesario enviar el identificador
  
       url : http://localhost:3030/v1/homeworks/4
       method:GET
