@@ -13,41 +13,6 @@ debes crear una base de datos con el nombre tareas y agregar las siguientes tabl
 
 
 
-`Table mydb.usuarios`
-
-`CREATE TABLE IF NOT EXISTS usuarios (
-  idusuarios INT NOT NULL AUTO_INCREMENT,
-  nombre VARCHAR(45) NULL,
-  token VARCHAR(45) NULL,
-  activo VARCHAR(45) NULL,
-  PRIMARY KEY (idusuarios),
-  UNIQUE INDEX idusuarios_UNIQUE (idusuarios ASC) VISIBLE)
-ENGINE = InnoDB;
-`
-
- `Table mydb.tareas`
-
-`CREATE TABLE IF NOT EXISTS tareas (
-  idtareas INT NOT NULL AUTO_INCREMENT,
-  usuarios_idusuarios INT NOT NULL,
-  titulo VARCHAR(45) NULL,
-  descripcion VARCHAR(45) NULL,
-  estatus_de_complecion VARCHAR(45) NULL,
-  fecha_de_entrega VARCHAR(45) NULL,
-  comentarios VARCHAR(45) NULL,
-  responsable VARCHAR(45) NULL,
-  tags VARCHAR(45) NULL,
-  PRIMARY KEY (idtareas),
-  UNIQUE INDEX idtareas_UNIQUE (idtareas ASC) VISIBLE,
-  INDEX fk_tareas_usuarios_idx (usuarios_idusuarios ASC) VISIBLE,
-  CONSTRAINT fk_tareas_usuarios
-    FOREIGN KEY (usuarios_idusuarios)
-    REFERENCES mydb.usuarios (idusuarios)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;`
-
-
 1.- Despues para poner en funcionamiento el sistema tenemos que clonar el repo, la liga es :
 https://github.com/GelaLez/sistema_gestion_de_tareas.git
 
@@ -92,6 +57,10 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
                     "tags": null
                 },
              }
+             
+       ![imagen](https://user-images.githubusercontent.com/16170395/233159613-5ffecb33-4ab7-4227-98ab-406e48eb3441.png)
+     
+                          
  5.- Obtener informacion de una sola tarea es necesario enviar el identificador
  
       url : http://localhost:3030/v1/homeworks/4
@@ -114,6 +83,10 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
               }
           ]
       }
+      
+      ![imagen](https://user-images.githubusercontent.com/16170395/233159485-a00bdcb5-eafa-4e9c-8661-232a39aca89e.png)
+
+      
             
 6.-    Crear una tarea 
 
@@ -131,12 +104,8 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
         y los campos opcionales son Comentarios, Responsable, Tags; al insertar una nueva tarea 
         nos volvera el id del registro
         
-        ejemplo:
-        
-        {
-            "err": false,
-            "insertId": 11
-        }
+       ![imagen](https://user-images.githubusercontent.com/16170395/233158844-b450b892-2615-46c0-842a-ed68dd5d070b.png)
+
    
    
 7.- Actualizar un registro es necesario enviar el **idtareas** de la tarea y **idusuario**  como identificadores del registro estos seran obligatorios
@@ -150,17 +119,22 @@ https://github.com/GelaLez/sistema_gestion_de_tareas.git
           "idusuario":2
       }
       
+      ![imagen](https://user-images.githubusercontent.com/16170395/233158563-8936f9ae-830d-4bcb-b9f5-593f5dca6982.png)
+
+      
       
 8.- Eliminar un registro es necesario enviar el **idtareas** y **idusuario** como datos obligatorios
 
-![imagen](https://user-images.githubusercontent.com/16170395/233158179-2c6cbe26-923b-4c74-83e8-7f65a562a35b.png)
-
-
-     url: http://localhost:3030/v1/homeworks/
+  url: http://localhost:3030/v1/homeworks/
      method:DELETE
      body: {
             "idtareas":3,
             "idusuario":2
            }
       
+      
+![imagen](https://user-images.githubusercontent.com/16170395/233158179-2c6cbe26-923b-4c74-83e8-7f65a562a35b.png)
+
+
+   
                     
